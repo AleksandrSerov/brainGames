@@ -15,3 +15,7 @@ https://asciinema.org/a/LoevxwV1uAeZ6LbUi6WOPRbt4
 ## Starting brain-progression
 
 https://asciinema.org/a/zjIYK9p42uo75O6gIJaHjmR22
+
+## Starting brain-prime
+
+https://asciinema.org/a/VsYbzXEBiuXlpAxTUis24BV5F
