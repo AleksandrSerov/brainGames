@@ -21,4 +21,4 @@ extends:
 rules:
   no-console: 0
   consistent-return: ['error', { 'treatUndefinedAsUnspecified': false }]
-  no-magic-numbers: ['error', { 'ignore': [1, 2, 100] }]
+  no-magic-numbers: ['error', { 'ignore': [1, 2, 3, 10, 100] }]
