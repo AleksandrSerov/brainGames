@@ -11,3 +11,7 @@ https://asciinema.org/a/AV9F1WlGiV5HTwxIGtLYRIbfm
 ## Starting brain-gcd
 
 https://asciinema.org/connect/62760e36-e3dd-429e-ab96-8bce3eed76a5
+
+## Starting brain-progression
+
+https://asciinema.org/a/zjIYK9p42uo75O6gIJaHjmR22
