@@ -4,18 +4,22 @@
 <a href="https://codeclimate.com/github/AleksandrSerov/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/8be57b9cd6a5bf0ed3c8/test_coverage" /></a>
 <img src="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1.svg?branch=master" />
 
+## Starting brain-even
+
+https://asciinema.org/a/rNdrU2xTfJBOvrd1huR7jXwVl
+
 ## Starting brain-calc
 
-https://asciinema.org/a/AV9F1WlGiV5HTwxIGtLYRIbfm
+https://asciinema.org/a/fChThP9hYcVmK9SgAuK8zymiB
 
 ## Starting brain-gcd
 
-https://asciinema.org/a/LoevxwV1uAeZ6LbUi6WOPRbt4
+https://asciinema.org/a/dqRYnN7kMtvDlRARfW1xBXQR8
 
 ## Starting brain-progression
 
-https://asciinema.org/a/zjIYK9p42uo75O6gIJaHjmR22
+https://asciinema.org/a/EH6nKGEO8faglZt3IN3GmcBF2
 
 ## Starting brain-prime
 
-https://asciinema.org/a/VsYbzXEBiuXlpAxTUis24BV5F
+https://asciinema.org/a/8BYcRYZXJcbSxafsgrwPVKzuH
