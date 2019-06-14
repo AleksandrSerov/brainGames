@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/local/bin/env node
 import brainCalcGame from '../games/brainCalc';
 import {
   printGreetings,

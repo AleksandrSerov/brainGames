@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/local/bin/env node
 import brainPrimeGame from '../games/brainPrimeGame';
 import {
   printGreetings,
