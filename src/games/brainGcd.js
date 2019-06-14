@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const getDivisors = num => {
+const getDivisors = (num) => {
   let res = [];
   for (let i = 1; i <= num; i += 1) {
     res = num % i === 0 ? [...res, i] : [...res];

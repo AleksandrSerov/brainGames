@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
 
-export const printHeadline = expression => {
+export const printHeadline = (expression) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${expression}`);
 };
 
-export const printGreetings = name => {
+export const printGreetings = (name) => {
   console.log(`Hello, ${name}!\n`);
 };
 
