@@ -1,15 +1,21 @@
 import readlineSync from 'readline-sync';
+import { getPlayerName, getCountQuestions, getRandomIntNumber } from '../engine';
+
+// printHeadline('What is the result of the expression?\n');
+// const name = askName();
+// printGreetings(name);
 
 const OPERATORS = ['-', '+', '*'];
 
-const brainCalcGame = (name, countQuestion) => {
+const gameProcessing = (name, countQuestion) => {
   if (!countQuestion) {
     return;
   }
 
-  const num1 = Math.round(Math.random() * 10);
-  const num2 = Math.round(Math.random() * 10);
-  const operator = OPERATORS[Math.floor(Math.random() * 3)];
+  const num1 = getRandomIntNumber(0, 10);
+  const num2 = getRandomIntNumber(0, 10);
+  const operator = OPERATORS[getRandomIntNumber(0, 2)];
+
   console.log(`Question: ${num1} ${operator} ${num2}\n`);
   const answer = readlineSync.question('Your answer: ');
   let correctAnswer;
@@ -32,13 +38,13 @@ const brainCalcGame = (name, countQuestion) => {
       console.log(`Congratulations, ${name}`);
     }
   } else {
-    console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`,
-    );
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`);
     console.log(`Let's try again, ${name}!\n`);
     return;
   }
-  brainCalcGame(name, countQuestion - 1);
+  gameProcessing(name, countQuestion - 1);
 };
 
-export default brainCalcGame;
+export const startGame = () => gameProcessing(getPlayerName(), getCountQuestions());
+
+export default startGame;

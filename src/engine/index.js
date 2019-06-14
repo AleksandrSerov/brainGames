@@ -11,11 +11,18 @@ export const printGreetings = (name) => {
 
 export const getCountQuestions = () => 3;
 
-export const askName = () => readlineSync.question('May I have your name? ');
+export const getPlayerName = () => readlineSync.question('May I have your name? ');
+
+export const getRandomIntNumber = (min, max) => {
+  const ceilMin = Math.ceil(min);
+  const floorMax = Math.floor(max);
+  return Math.floor(Math.random() * (floorMax - ceilMin + 1)) + ceilMin;
+};
 
 export default {
   printHeadline,
   printGreetings,
-  askName,
+  getPlayerName,
   getCountQuestions,
+  getRandomIntNumber,
 };
