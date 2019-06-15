@@ -3,14 +3,14 @@ import brainPrimeGame from '../games/brainPrimeGame';
 import {
   printGreetings,
   printHeadline,
-  askName,
+  getPlayerName,
   getCountQuestions,
 } from '../engine';
 
 printHeadline(
   'Answer "yes" if given number is prime. Otherwise answer "no".\n',
 );
-const name = askName();
+const name = getPlayerName();
 printGreetings(name);
 
 brainPrimeGame(name, getCountQuestions());

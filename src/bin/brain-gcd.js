@@ -3,12 +3,12 @@ import brainGcdGame from '../games/brainGcd';
 import {
   printGreetings,
   printHeadline,
-  askName,
+  getPlayerName,
   getCountQuestions,
 } from '../engine';
 
 printHeadline('Find the greatest common divisor of given numbers.\n');
-const name = askName();
+const name = getPlayerName();
 printGreetings(name);
 
 brainGcdGame(name, getCountQuestions());
