@@ -2,7 +2,6 @@ import {
   getCountQuestions,
   getRandomIntNumber,
   gameProcessing,
-  getGameData,
 } from '../engine';
 
 const OPERATORS = ['-', '+', '*'];
@@ -34,10 +33,9 @@ const getRoundData = () => {
 };
 
 const countQuestion = getCountQuestions();
-const data = getGameData(countQuestion, getRoundData);
 
 export const startGame = () => {
-  gameProcessing(HEADLINE_EXPRESSION, countQuestion, data);
+  gameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
 };
 
 export default startGame;
