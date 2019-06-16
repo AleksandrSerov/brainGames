@@ -1,6 +1,12 @@
-import readlineSync from 'readline-sync';
+import {
+  getCountQuestions,
+  getRandomIntNumber,
+  gameProcessing,
+} from '../engine';
 
-const getProgression = (step, start, count = 10) => {
+const HEADLINE_EXPRESSION = 'What number is missing in the progression?\n';
+const LIST_LENGTH = 10;
+const getProgression = (step, start, count) => {
   const res = [start];
   for (let i = 1; i < count; i += 1) {
     res.push(res[i - 1] + step);
@@ -8,39 +14,27 @@ const getProgression = (step, start, count = 10) => {
   return res;
 };
 
-const brainProgression = (name, countQuestion) => {
-  if (!countQuestion) {
-    return;
-  }
+const getRoundData = () => {
+  const step = getRandomIntNumber(1, 15);
+  const start = getRandomIntNumber(0, 100);
+  const list = getProgression(step, start, LIST_LENGTH);
+  const correctAnswerIndex = getRandomIntNumber(0, LIST_LENGTH - 1);
+  const correctAnswer = list[correctAnswerIndex];
 
-  const step = Math.floor(Math.random() * 10 + 1);
-  const start = Math.floor(Math.random() * 100);
+  const question = `${list.slice(0, correctAnswerIndex)} .. ${list.slice(
+    correctAnswerIndex + 1,
+  )}\n`;
 
-  const list = getProgression(step, start);
-
-  const correctAnswerId = Math.floor(Math.random() * list.length);
-  const correctAnswer = list[correctAnswerId];
-
-  console.log(
-    `Question: ${list.slice(0, correctAnswerId)} .. ${list.slice(
-      correctAnswerId + 1,
-    )}\n`,
-  );
-  const answer = readlineSync.question('Your answer: ');
-
-  if (Number(answer) === correctAnswer) {
-    console.log('Correct!');
-    if (countQuestion === 1) {
-      console.log(`Congratulations, ${name}`);
-    }
-  } else {
-    console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`,
-    );
-    console.log(`Let's try again, ${name}!\n`);
-    return;
-  }
-  brainProgression(name, countQuestion - 1);
+  return {
+    question,
+    correctAnswer,
+  };
 };
 
-export default brainProgression;
+const countQuestion = getCountQuestions();
+
+export const startGame = () => {
+  gameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
+};
+
+export default startGame;
