@@ -1,4 +1,10 @@
-import readlineSync from 'readline-sync';
+import {
+  getCountQuestions,
+  getRandomIntNumber,
+  gameProcessing,
+} from '../engine';
+
+const HEADLINE_EXPRESSION = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
 
 const isPrime = (num) => {
   for (let i = 2; i < Math.floor(num / 2); i += 1) {
@@ -9,29 +15,20 @@ const isPrime = (num) => {
   return true;
 };
 
-const brainProgression = (name, countQuestion) => {
-  if (!countQuestion) {
-    return;
-  }
-  const num = Math.floor(Math.random() * 100);
+const getRoundData = () => {
+  const num = getRandomIntNumber(1, 100);
+  const question = `${num}`;
   const correctAnswer = isPrime(num) ? 'yes' : 'no';
-
-  console.log(`Question: ${num}\n`);
-  const answer = readlineSync.question('Your answer: ');
-
-  if (answer === correctAnswer) {
-    console.log('Correct!');
-    if (countQuestion === 1) {
-      console.log(`Congratulations, ${name}`);
-    }
-  } else {
-    console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`,
-    );
-    console.log(`Let's try again, ${name}!\n`);
-    return;
-  }
-  brainProgression(name, countQuestion - 1);
+  return {
+    question,
+    correctAnswer,
+  };
 };
 
-export default brainProgression;
+const countQuestion = getCountQuestions();
+
+export const startGame = () => {
+  gameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
+};
+
+export default startGame;
