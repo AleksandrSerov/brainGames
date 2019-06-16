@@ -1,4 +1,10 @@
-import readlineSync from 'readline-sync';
+import {
+  getCountQuestions,
+  getRandomIntNumber,
+  gameProcessing,
+} from '../engine';
+
+const HEADLINE_EXPRESSION = 'Find the greatest common divisor of given numbers.\n';
 
 const getDivisors = (num) => {
   let res = [];
@@ -15,31 +21,21 @@ const getGcd = (num1, num2) => {
   return Math.max(...resArr);
 };
 
-const brainGcd = (name, countQuestion) => {
-  if (!countQuestion) {
-    return;
-  }
-
-  const num1 = Math.round(Math.random() * 100);
-  const num2 = Math.round(Math.random() * 100);
-
-  console.log(`Question: ${num1} ${num2}\n`);
-  const answer = readlineSync.question('Your answer: ');
-
+const getRoundData = () => {
+  const num1 = getRandomIntNumber(1, 100);
+  const num2 = getRandomIntNumber(1, 100);
+  const question = `${num1} ${num2}`;
   const correctAnswer = getGcd(num1, num2);
-  if (Number(answer) === correctAnswer) {
-    console.log('Correct!');
-    if (countQuestion === 1) {
-      console.log(`Congratulations, ${name}`);
-    }
-  } else {
-    console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`,
-    );
-    console.log(`Let's try again, ${name}!\n`);
-    return;
-  }
-  brainGcd(name, countQuestion - 1);
+  return {
+    question,
+    correctAnswer,
+  };
 };
 
-export default brainGcd;
+const countQuestion = getCountQuestions();
+
+export const startGame = () => {
+  gameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
+};
+
+export default startGame;

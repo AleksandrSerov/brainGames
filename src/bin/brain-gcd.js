@@ -1,11 +1,4 @@
 #!/usr/bin/env node
-// import brainGcdGame from '../games/brainGcd';
-// import {
-//   getCountQuestions,
-// } from '../engine';
+import { startGame } from '../games/brainGcd';
 
-// printHeadline('Find the greatest common divisor of given numbers.\n');
-// const name = getPlayerName();
-// printGreetings(name);
-
-// brainGcdGame(name, getCountQuestions());
+startGame();
