@@ -1,16 +1,4 @@
-#!/usr/local/bin/node
-import brainPrimeGame from '../games/brainPrimeGame';
-import {
-  printGreetings,
-  printHeadline,
-  askName,
-  getCountQuestions,
-} from '../engine';
+#!/usr/bin/env node
+import { startGame } from '../games/brainPrimeGame';
 
-printHeadline(
-  'Answer "yes" if given number is prime. Otherwise answer "no".\n',
-);
-const name = askName();
-printGreetings(name);
-
-brainPrimeGame(name, getCountQuestions());
+startGame();

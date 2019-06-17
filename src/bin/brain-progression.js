@@ -1,14 +1,4 @@
-#!/usr/local/bin/node
-import brainProgressionGame from '../games/brainProgression';
-import {
-  printGreetings,
-  printHeadline,
-  askName,
-  getCountQuestions,
-} from '../engine';
+#!/usr/bin/env node
+import { startGame } from '../games/brainProgression';
 
-printHeadline('What number is missing in the progression?\n');
-const name = askName();
-printGreetings(name);
-
-brainProgressionGame(name, getCountQuestions());
+startGame();

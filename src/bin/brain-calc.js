@@ -1,14 +1,4 @@
-#!/usr/local/bin/node
-import brainCalcGame from '../games/brainCalc';
-import {
-  printGreetings,
-  printHeadline,
-  askName,
-  getCountQuestions,
-} from '../engine';
+#!/usr/bin/env node
+import { startGame } from '../games/brainCalc';
 
-printHeadline('What is the result of the expression?\n');
-const name = askName();
-printGreetings(name);
-
-brainCalcGame(name, getCountQuestions());
+startGame();
