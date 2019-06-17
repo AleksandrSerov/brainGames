@@ -5,7 +5,7 @@ import { getRandomIntNumber } from '../generator';
 const HEADLINE_EXPRESSION = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
 
 const isPrime = (num) => {
-  if (num < 3) {
+  if (num < 2) {
     return false;
   }
 
