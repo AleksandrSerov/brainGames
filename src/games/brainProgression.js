@@ -5,11 +5,11 @@ import { getRandomIntNumber } from '../generator';
 const HEADLINE_EXPRESSION = 'What number is missing in the progression?\n';
 const LIST_LENGTH = 10;
 const getProgression = (step, start, count) => {
-  const res = [start];
+  const progression = [start];
   for (let i = 1; i < count; i += 1) {
-    res.push(res[i - 1] + step);
+    progression.push(progression[i - 1] + step);
   }
-  return res;
+  return progression;
 };
 
 const getRoundData = () => {
