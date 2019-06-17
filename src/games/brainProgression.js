@@ -1,8 +1,6 @@
-import {
-  getCountQuestions,
-  getRandomIntNumber,
-  gameProcessing,
-} from '../engine';
+import { getCountQuestions, gameProcessing } from '../engine';
+
+import { getRandomIntNumber } from '../generator';
 
 const HEADLINE_EXPRESSION = 'What number is missing in the progression?\n';
 const LIST_LENGTH = 10;

@@ -1,8 +1,6 @@
-import {
-  getCountQuestions,
-  getRandomIntNumber,
-  gameProcessing,
-} from '../engine';
+import { getCountQuestions, gameProcessing } from '../engine';
+
+import { getRandomIntNumber } from '../generator';
 
 const OPERATORS = ['-', '+', '*'];
 const HEADLINE_EXPRESSION = 'What is the result of the expression?\n';

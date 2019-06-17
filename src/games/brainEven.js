@@ -1,8 +1,6 @@
-import {
-  getCountQuestions,
-  getRandomIntNumber,
-  gameProcessing,
-} from '../engine';
+import { getCountQuestions, gameProcessing } from '../engine';
+
+import { getRandomIntNumber } from '../generator';
 
 const ANSWERS = ['yes', 'no'];
 const HEADLINE_EXPRESSION = 'Answer "yes" if number even otherwise answer "no".\n';

@@ -1,8 +1,6 @@
-import {
-  getCountQuestions,
-  getRandomIntNumber,
-  gameProcessing,
-} from '../engine';
+import { getCountQuestions, gameProcessing } from '../engine';
+
+import { getRandomIntNumber } from '../generator';
 
 const HEADLINE_EXPRESSION = 'Find the greatest common divisor of given numbers.\n';
 
