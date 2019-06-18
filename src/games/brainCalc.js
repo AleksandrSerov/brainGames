@@ -2,7 +2,7 @@ import { startGameProcessing } from '../engine';
 import getRandomIntNumber from '../generator';
 
 const operators = ['-', '+', '*'];
-const gameDescription = 'What is the result of the expression?\n';
+const gameDescription = 'What is the result of the expression?';
 const countRounds = 3;
 
 const getRoundData = () => {

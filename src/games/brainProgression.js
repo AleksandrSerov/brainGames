@@ -2,7 +2,7 @@ import { getCountQuestions, startGameProcessing } from '../engine';
 
 import getRandomIntNumber from '../generator';
 
-const HEADLINE_EXPRESSION = 'What number is missing in the progression?\n';
+const gameDescription = 'What number is missing in the progression?';
 const LIST_LENGTH = 10;
 const getProgression = (step, start, count) => {
   const res = [start];
@@ -32,7 +32,7 @@ const getRoundData = () => {
 const countQuestion = getCountQuestions();
 
 const startGame = () => {
-  startGameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
+  startGameProcessing(gameDescription, countQuestion, getRoundData);
 };
 
 export default startGame;

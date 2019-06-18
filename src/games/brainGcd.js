@@ -2,7 +2,7 @@ import { getCountQuestions, startGameProcessing } from '../engine';
 
 import getRandomIntNumber from '../generator';
 
-const HEADLINE_EXPRESSION = 'Find the greatest common divisor of given numbers.\n';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const getDivisors = (num) => {
   let res = [];
@@ -33,7 +33,7 @@ const getRoundData = () => {
 const countQuestion = getCountQuestions();
 
 const startGame = () => {
-  startGameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
+  startGameProcessing(gameDescription, countQuestion, getRoundData);
 };
 
 export default startGame;
