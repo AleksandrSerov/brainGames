@@ -1,4 +1,4 @@
-import { getCountQuestions, gameProcessing } from '../engine';
+import { getCountQuestions, startGameProcessing } from '../engine';
 
 import { getRandomIntNumber } from '../generator';
 
@@ -33,7 +33,7 @@ const getRoundData = () => {
 const countQuestion = getCountQuestions();
 
 export const startGame = () => {
-  gameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
+  startGameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
 };
 
 export default startGame;

@@ -13,7 +13,7 @@ const getPlayerName = () => readlineSync.question('May I have your name? ');
 
 export const getCountQuestions = () => 3;
 
-export const gameProcessing = (
+export const startGameProcessing = (
   headlineExpression,
   countQuestions,
   getRoundData,
@@ -53,5 +53,5 @@ export const gameProcessing = (
 
 export default {
   getCountQuestions,
-  gameProcessing,
+  startGameProcessing,
 };
