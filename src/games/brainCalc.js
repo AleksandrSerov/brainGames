@@ -1,12 +1,12 @@
-import { getCountQuestions, startGameProcessing } from '../engine';
+import { startGameProcessing } from '../engine';
+import getRandomIntNumber from '../generator';
 
-import { getRandomIntNumber } from '../generator';
-
-const OPERATORS = ['-', '+', '*'];
-const HEADLINE_EXPRESSION = 'What is the result of the expression?\n';
+const operators = ['-', '+', '*'];
+const gameDescription = 'What is the result of the expression?\n';
+const countRounds = 3;
 
 const getRoundData = () => {
-  const operator = OPERATORS[getRandomIntNumber(0, 2)];
+  const operator = operators[getRandomIntNumber(0, operators.length - 1)];
   const num1 = getRandomIntNumber(0, 10);
   const num2 = getRandomIntNumber(0, 10);
   const question = `${num1} ${operator} ${num2}`;
@@ -30,10 +30,8 @@ const getRoundData = () => {
   };
 };
 
-const countQuestion = getCountQuestions();
-
-export const startGame = () => {
-  startGameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
+const startGame = () => {
+  startGameProcessing(gameDescription, countRounds, getRoundData);
 };
 
 export default startGame;

@@ -1,5 +1,5 @@
 import { startGameProcessing } from '../engine';
-import { getRandomIntNumber } from '../generator';
+import getRandomIntNumber from '../generator';
 
 const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
 const countRounds = 3;

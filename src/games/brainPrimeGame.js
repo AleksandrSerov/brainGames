@@ -1,6 +1,6 @@
 import { getCountQuestions, startGameProcessing } from '../engine';
 
-import { getRandomIntNumber } from '../generator';
+import getRandomIntNumber from '../generator';
 
 const HEADLINE_EXPRESSION = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
 
