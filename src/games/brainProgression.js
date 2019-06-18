@@ -31,7 +31,7 @@ const getRoundData = () => {
 
 const countQuestion = getCountQuestions();
 
-export const startGame = () => {
+const startGame = () => {
   startGameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
 };
 
