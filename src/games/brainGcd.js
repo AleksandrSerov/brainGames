@@ -5,20 +5,7 @@ import getRandomIntNumber from '../generator';
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 const countRounds = 3;
 
-const getDivisors = (num) => {
-  let res = [];
-  for (let i = 1; i <= num; i += 1) {
-    res = num % i === 0 ? [...res, i] : [...res];
-  }
-  return res;
-};
-
-const getGcd = (num1, num2) => {
-  const arr1 = getDivisors(num1);
-  const arr2 = getDivisors(num2);
-  const resArr = arr1.filter(item => arr2.includes(item));
-  return Math.max(...resArr);
-};
+const getGcd = (num1, num2) => (num1 !== 0 ? getGcd(num2 % num1, num1) : num2);
 
 const getRoundData = () => {
   const num1 = getRandomIntNumber(1, 100);
