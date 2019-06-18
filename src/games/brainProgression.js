@@ -7,11 +7,11 @@ const LIST_LENGTH = 10;
 const countRounds = 3;
 
 const getProgression = (step, start, count) => {
-  const res = [];
+  const progression = [];
   for (let i = 0; i < count; i += 1) {
-    res.push(start + step * i);
+    progression.push(start + step * i);
   }
-  return res;
+  return progression;
 };
 
 const getRoundData = () => {

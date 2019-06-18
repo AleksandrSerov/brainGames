@@ -6,7 +6,7 @@ const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer
 const countRounds = 3;
 
 const isPrime = (num) => {
-  if (num < 3) {
+  if (num < 2) {
     return false;
   }
 
