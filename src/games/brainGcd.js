@@ -1,4 +1,4 @@
-import { startGameProcessing } from '../engine';
+import startGameProcessing from '../engine';
 
 import getRandomIntNumber from '../generator';
 
