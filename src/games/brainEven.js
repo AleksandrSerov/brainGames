@@ -1,9 +1,9 @@
 import { startGameProcessing } from '../engine';
-
 import { getRandomIntNumber } from '../generator';
 
 const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
 const countRounds = 3;
+
 const isEven = num => num % 2 === 0;
 
 const getRoundData = () => {
