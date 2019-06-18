@@ -16,7 +16,7 @@ const getDivisors = (num) => {
 const getGcd = (num1, num2) => {
   const arr1 = getDivisors(num1);
   const arr2 = getDivisors(num2);
-  const resArr = arr1.filter((item) => arr2.includes(item));
+  const resArr = arr1.filter(item => arr2.includes(item));
   return Math.max(...resArr);
 };
 

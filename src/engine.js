@@ -31,8 +31,8 @@ export const startGameProcessing = (
     const playerAnswer = readlineSync.question('Your answer: ');
 
     if (
-      playerAnswer === correctAnswer ||
-      Number(playerAnswer) === correctAnswer
+      playerAnswer === correctAnswer
+      || Number(playerAnswer) === correctAnswer
     ) {
       console.log('Correct!');
       if (count === 1) {
