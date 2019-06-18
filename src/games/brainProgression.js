@@ -1,13 +1,15 @@
-import { getCountQuestions, gameProcessing } from '../engine';
+import startGameProcessing from '../engine';
 
-import { getRandomIntNumber } from '../generator';
+import getRandomIntNumber from '../generator';
 
-const HEADLINE_EXPRESSION = 'What number is missing in the progression?\n';
+const gameDescription = 'What number is missing in the progression?';
 const LIST_LENGTH = 10;
+const countRounds = 3;
+
 const getProgression = (step, start, count) => {
-  const progression = [start];
-  for (let i = 1; i < count; i += 1) {
-    progression.push(progression[i - 1] + step);
+  const progression = [];
+  for (let i = 0; i < count; i += 1) {
+    progression.push(start + step * i);
   }
   return progression;
 };
@@ -29,10 +31,8 @@ const getRoundData = () => {
   };
 };
 
-const countQuestion = getCountQuestions();
-
-export const startGame = () => {
-  gameProcessing(HEADLINE_EXPRESSION, countQuestion, getRoundData);
+const startGame = () => {
+  startGameProcessing(gameDescription, countRounds, getRoundData);
 };
 
 export default startGame;

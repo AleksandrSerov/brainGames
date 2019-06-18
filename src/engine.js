@@ -11,13 +11,7 @@ const printGreetings = (name) => {
 
 const getPlayerName = () => readlineSync.question('May I have your name? ');
 
-export const getCountQuestions = () => 3;
-
-export const gameProcessing = (
-  headlineExpression,
-  countQuestions,
-  getRoundData,
-) => {
+const startGameProcessing = (headlineExpression, countRounds, getRoundData) => {
   printHeadline(headlineExpression);
   const playerName = getPlayerName();
   printGreetings(playerName);
@@ -48,10 +42,7 @@ export const gameProcessing = (
 
     return iter(count - 1, acc);
   };
-  return iter(countQuestions, null);
+  return iter(countRounds, null);
 };
 
-export default {
-  getCountQuestions,
-  gameProcessing,
-};
+export default startGameProcessing;
