@@ -16,7 +16,7 @@ const getRoundData = () => {
   };
 };
 
-export const startGame = () => {
+const startGame = () => {
   startGameProcessing(gameDescription, countRounds, getRoundData);
 };
 export default startGame;
