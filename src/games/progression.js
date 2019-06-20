@@ -3,7 +3,7 @@ import playGame from '../engine';
 import getRandomIntNumber from '../generator';
 
 const gameDescription = 'What number is missing in the progression?';
-const listLength = 10;
+const progressionLength = 10;
 
 const getProgression = (step, start, count) => {
   const progression = [];
@@ -16,13 +16,11 @@ const getProgression = (step, start, count) => {
 const getRoundData = () => {
   const step = getRandomIntNumber(1, 15);
   const start = getRandomIntNumber(0, 100);
-  const list = getProgression(step, start, listLength);
-  const correctAnswerIndex = getRandomIntNumber(0, listLength - 1);
-  const correctAnswer = list[correctAnswerIndex];
+  const progression = getProgression(step, start, progressionLength);
+  const correctAnswerIndex = getRandomIntNumber(0, progressionLength - 1);
+  const correctAnswer = progression[correctAnswerIndex];
 
-  const question = `${list.slice(0, correctAnswerIndex)} .. ${list.slice(
-    correctAnswerIndex + 1,
-  )}\n`;
+  const question = `${progression.slice(0, correctAnswerIndex)} .. ${progression.slice(correctAnswerIndex + 1)}`;
 
   return {
     question,
