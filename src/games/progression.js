@@ -24,7 +24,7 @@ const getRoundData = () => {
 
   return {
     question,
-    correctAnswer,
+    correctAnswer: String(correctAnswer),
   };
 };
 
