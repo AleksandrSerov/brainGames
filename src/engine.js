@@ -6,14 +6,14 @@ const playGame = (description, getRoundData) => {
   console.log(`${description}`);
 
   const playerName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${playerName}!\n`);
+  console.log(`Hello, ${playerName}!`);
 
   const iter = (count, acc) => {
     if (count === 0) {
       return acc;
     }
     const { question, correctAnswer } = getRoundData();
-    console.log(`Question: ${question}\n`);
+    console.log(`Question: ${question}`);
     const playerAnswer = readlineSync.question('Your answer: ');
 
     if (playerAnswer === correctAnswer) {
@@ -23,9 +23,9 @@ const playGame = (description, getRoundData) => {
       }
     } else {
       console.log(
-        `'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`,
+        `'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
-      console.log(`Let's try again, ${playerName}!\n`);
+      console.log(`Let's try again, ${playerName}!`);
       return iter(0, acc);
     }
 
