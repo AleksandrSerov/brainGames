@@ -1,13 +1,11 @@
 import readlineSync from 'readline-sync';
 
-const getPlayerName = () => readlineSync.question('May I have your name? ');
-
 const playGame = (description, getRoundData) => {
   const countRounds = 3;
   console.log('Welcome to the Brain Games!');
   console.log(`${description}`);
 
-  const playerName = getPlayerName();
+  const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!\n`);
 
   const iter = (count, acc) => {
