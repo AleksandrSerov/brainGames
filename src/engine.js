@@ -8,9 +8,9 @@ const playGame = (description, getRoundData) => {
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
 
-  const iter = (count, acc) => {
+  const iter = (count) => {
     if (count > countRounds) {
-      return acc;
+      return;
     }
     const { question, correctAnswer } = getRoundData();
     console.log(`Question: ${question}`);
@@ -22,14 +22,11 @@ const playGame = (description, getRoundData) => {
         console.log(`Congratulations, ${playerName}`);
       }
     } else {
-      console.log(
-        `'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
-      );
+      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${playerName}!`);
-      return iter(countRounds + 1, acc);
+      iter(countRounds + 1);
     }
-
-    return iter(count + 1, acc);
+    iter(count + 1);
   };
   return iter(1, null);
 };
