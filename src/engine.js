@@ -1,20 +1,14 @@
 import readlineSync from 'readline-sync';
 
-const printHeadline = (expression) => {
-  console.log('Welcome to the Brain Games!');
-  console.log(`${expression}`);
-};
-
-const printGreetings = (name) => {
-  console.log(`Hello, ${name}!\n`);
-};
-
 const getPlayerName = () => readlineSync.question('May I have your name? ');
 
-const startGameProcessing = (headlineExpression, countRounds, getRoundData) => {
-  printHeadline(headlineExpression);
+const playGame = (description, getRoundData) => {
+  const countRounds = 3;
+  console.log('Welcome to the Brain Games!');
+  console.log(`${description}`);
+
   const playerName = getPlayerName();
-  printGreetings(playerName);
+  console.log(`Hello, ${playerName}!\n`);
 
   const iter = (count, acc) => {
     if (count === 0) {
@@ -24,10 +18,7 @@ const startGameProcessing = (headlineExpression, countRounds, getRoundData) => {
     console.log(`Question: ${question}\n`);
     const playerAnswer = readlineSync.question('Your answer: ');
 
-    if (
-      playerAnswer === correctAnswer
-      || Number(playerAnswer) === correctAnswer
-    ) {
+    if (playerAnswer === correctAnswer) {
       console.log('Correct!');
       if (count === 1) {
         console.log(`Congratulations, ${playerName}`);
@@ -45,4 +36,4 @@ const startGameProcessing = (headlineExpression, countRounds, getRoundData) => {
   return iter(countRounds, null);
 };
 
-export default startGameProcessing;
+export default playGame;
