@@ -24,7 +24,7 @@ const playGame = (description, getRoundData) => {
     } else {
       console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${playerName}!`);
-      iter(countRounds + 1);
+      return;
     }
     iter(count + 1);
   };

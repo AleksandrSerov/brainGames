@@ -13,7 +13,7 @@ const getRoundData = () => {
   const correctAnswer = getGcd(num1, num2);
   return {
     question,
-    correctAnswer,
+    correctAnswer: String(correctAnswer),
   };
 };
 
