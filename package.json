@@ -26,8 +26,6 @@
   },
   "dependencies": {
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-jest": "^22.6.4",
-    "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "readline-sync": "^1.4.9"
   },
   "devDependencies": {
