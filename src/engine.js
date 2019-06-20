@@ -28,7 +28,7 @@ const playGame = (description, getRoundData) => {
     }
     iter(count + 1);
   };
-  return iter(1, null);
+  iter(1, null);
 };
 
 export default playGame;
