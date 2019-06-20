@@ -27,8 +27,6 @@ const getRoundData = () => {
   };
 };
 
-const startGame = () => {
+export default () => {
   playGame(gameDescription, getRoundData);
 };
-
-export default startGame;
