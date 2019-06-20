@@ -9,7 +9,7 @@ const playGame = (description, getRoundData) => {
   console.log(`Hello, ${playerName}!`);
 
   const iter = (count, acc) => {
-    if (count === 0) {
+    if (count > countRounds) {
       return acc;
     }
     const { question, correctAnswer } = getRoundData();
@@ -18,7 +18,7 @@ const playGame = (description, getRoundData) => {
 
     if (playerAnswer === correctAnswer) {
       console.log('Correct!');
-      if (count === 1) {
+      if (count > countRounds - 1) {
         console.log(`Congratulations, ${playerName}`);
       }
     } else {
@@ -26,12 +26,12 @@ const playGame = (description, getRoundData) => {
         `'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${playerName}!`);
-      return iter(0, acc);
+      return iter(countRounds + 1, acc);
     }
 
-    return iter(count - 1, acc);
+    return iter(count + 1, acc);
   };
-  return iter(countRounds, null);
+  return iter(1, null);
 };
 
 export default playGame;
