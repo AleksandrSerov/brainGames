@@ -6,13 +6,24 @@
     "braingames",
     "hexlet"
   ],
+  "license": "ISC",
+  "author": "Aleksandr Serov",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-gcd.js",
+    "brain-progression": "dist/bin/brain-progression.js",
+    "brain-prime": "dist/bin/brain-prime.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
-  "author": "Aleksandr Serov",
-  "license": "ISC",
   "dependencies": {
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-jest": "^22.6.4",
@@ -30,17 +41,6 @@
     "eslint-plugin-import": "^2.17.3",
     "husky": "^2.4.1"
   },
-  "bin": {
-    "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-gcd.js",
-    "brain-progression": "dist/bin/brain-progression.js",
-    "brain-prime": "dist/bin/brain-prime.js"
-  },
-  "files": [
-    "dist"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "npx eslint ."
