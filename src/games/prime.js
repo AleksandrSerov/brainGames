@@ -1,9 +1,8 @@
-import startGameProcessing from '../engine';
+import playGame from '../engine';
 
 import getRandomIntNumber from '../generator';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const countRounds = 3;
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -19,17 +18,14 @@ const isPrime = (num) => {
 };
 
 const getRoundData = () => {
-  const num = getRandomIntNumber(1, 100);
-  const question = `${num}`;
-  const correctAnswer = isPrime(num) ? 'yes' : 'no';
+  const question = getRandomIntNumber(1, 100);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return {
     question,
     correctAnswer,
   };
 };
 
-const startGame = () => {
-  startGameProcessing(gameDescription, countRounds, getRoundData);
+export default () => {
+  playGame(gameDescription, getRoundData);
 };
-
-export default startGame;

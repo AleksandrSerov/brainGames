@@ -1,48 +1,34 @@
 import readlineSync from 'readline-sync';
 
-const printHeadline = (expression) => {
+const playGame = (description, getRoundData) => {
+  const countRounds = 3;
   console.log('Welcome to the Brain Games!');
-  console.log(`${expression}`);
-};
+  console.log(`${description}`);
 
-const printGreetings = (name) => {
-  console.log(`Hello, ${name}!\n`);
-};
+  const playerName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${playerName}!`);
 
-const getPlayerName = () => readlineSync.question('May I have your name? ');
-
-const startGameProcessing = (headlineExpression, countRounds, getRoundData) => {
-  printHeadline(headlineExpression);
-  const playerName = getPlayerName();
-  printGreetings(playerName);
-
-  const iter = (count, acc) => {
-    if (count === 0) {
-      return acc;
+  const iter = (count) => {
+    if (count > countRounds) {
+      return;
     }
     const { question, correctAnswer } = getRoundData();
-    console.log(`Question: ${question}\n`);
+    console.log(`Question: ${question}`);
     const playerAnswer = readlineSync.question('Your answer: ');
 
-    if (
-      playerAnswer === correctAnswer
-      || Number(playerAnswer) === correctAnswer
-    ) {
+    if (playerAnswer === correctAnswer) {
       console.log('Correct!');
-      if (count === 1) {
+      if (count > countRounds - 1) {
         console.log(`Congratulations, ${playerName}`);
       }
     } else {
-      console.log(
-        `'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n`,
-      );
-      console.log(`Let's try again, ${playerName}!\n`);
-      return iter(0, acc);
+      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${playerName}!`);
+      return;
     }
-
-    return iter(count - 1, acc);
+    iter(count + 1);
   };
-  return iter(countRounds, null);
+  iter(1, null);
 };
 
-export default startGameProcessing;
+export default playGame;

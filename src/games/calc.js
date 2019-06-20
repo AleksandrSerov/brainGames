@@ -1,9 +1,8 @@
-import startGameProcessing from '../engine';
+import playGame from '../engine';
 import getRandomIntNumber from '../generator';
 
 const operators = ['-', '+', '*'];
 const gameDescription = 'What is the result of the expression?';
-const countRounds = 3;
 
 const getRoundData = () => {
   const operator = operators[getRandomIntNumber(0, operators.length - 1)];
@@ -26,12 +25,10 @@ const getRoundData = () => {
   }
   return {
     question,
-    correctAnswer,
+    correctAnswer: String(correctAnswer),
   };
 };
 
-const startGame = () => {
-  startGameProcessing(gameDescription, countRounds, getRoundData);
+export default () => {
+  playGame(gameDescription, getRoundData);
 };
-
-export default startGame;
