@@ -8,9 +8,9 @@ startCalc:
 	npx babel-node src/bin/brain-calc.js
 startGcd:
 	npx babel-node src/bin/brain-gcd.js
-startProgression:
+startPro:
 	npx babel-node src/bin/brain-progression.js
-startPrime:
+startPri:
 	npx babel-node src/bin/brain-prime.js
 publish:
 	npm publish --dry-run
