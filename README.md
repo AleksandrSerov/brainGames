@@ -4,23 +4,33 @@
 <a href="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1">
 <img src="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1.svg?branch=master" /></a>
 
-## Starting even
+## Instalation
+
+```bash
+git clone https://github.com/AleksandrSerov/frontend-project-lvl1.git
+cd frontend-project-lvl1
+make install
+make publish
+sudo npm link
+```
+
+### Starting even
 
 ![Brain-even game](demo/even.gif)
 https://asciinema.org/a/rNdrU2xTfJBOvrd1huR7jXwVl
 
-## Starting calc
+### Starting calc
 
 https://asciinema.org/a/fChThP9hYcVmK9SgAuK8zymiB
 
-## Starting gcd
+### Starting gcd
 
 https://asciinema.org/a/dqRYnN7kMtvDlRARfW1xBXQR8
 
-## Starting progression
+### Starting progression
 
 https://asciinema.org/a/EH6nKGEO8faglZt3IN3GmcBF2
 
-## Starting prime
+### Starting prime
 
 https://asciinema.org/a/8BYcRYZXJcbSxafsgrwPVKzuH
