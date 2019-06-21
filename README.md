@@ -4,22 +4,44 @@
 <a href="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1">
 <img src="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1.svg?branch=master" /></a>
 
-## Starting brain-even
+## Instalation
 
-https://asciinema.org/a/rNdrU2xTfJBOvrd1huR7jXwVl
+```bash
+git clone https://github.com/AleksandrSerov/frontend-project-lvl1.git
+cd frontend-project-lvl1
+make install
+```
 
-## Starting brain-calc
+## Scripts
 
-https://asciinema.org/a/fChThP9hYcVmK9SgAuK8zymiB
+- `make games` - Start brain-games.js
+- `make even` - Start brain-even.js
+- `make calc` - Start brain-calc.js
+- `make gcd` - Start brain-gcd.js
+- `make prog` - Start brain-progression.js
+- `make prime` - Start brain-prime.js
+- `make publish` - Publish project
+- `make lint` - Start lint
+- `make install` - Install dependences
 
-## Starting brain-gcd
+## Demo
 
-https://asciinema.org/a/dqRYnN7kMtvDlRARfW1xBXQR8
+### Even
 
-## Starting brain-progression
+![Even game](demo/even.gif)
 
-https://asciinema.org/a/EH6nKGEO8faglZt3IN3GmcBF2
+### Calc
 
-## Starting brain-prime
+![Calc game](demo/calc.gif)
 
-https://asciinema.org/a/8BYcRYZXJcbSxafsgrwPVKzuH
+### Gcd
+
+![Gcd game](demo/gcd.gif)
+
+### Progression
+
+![Progression game](demo/progression.gif)
+
+### Prime
+
+![Prime game](demo/prime.gif)
