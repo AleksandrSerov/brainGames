@@ -27,14 +27,24 @@ make install - Install dependences
 
 ```
 
-### Starting even
+## Demo
 
-![Brain-even game](demo/even.gif)
+### Even
 
-### Starting calc
+![Even game](demo/even.gif)
 
-### Starting gcd
+### Calc
 
-### Starting progression
+![Calc game](demo/calc.gif)
 
-### Starting prime
+### Gcd
+
+![Gcd game](demo/gcd.gif)
+
+### Progression
+
+![Progression game](demo/progression.gif)
+
+### Prime
+
+![Prime game](demo/prime.gif)
