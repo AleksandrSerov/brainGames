@@ -14,18 +14,15 @@ make install
 
 ## Scripts
 
-```bash
-make games - Start brain-games.js
-make even - Start brain-even.js
-make calc - Start brain-calc.js
-make gcd - Start brain-gcd.js
-make prog - Start brain-progression.js
-make prime - Start brain-prime.js
-make publish - Publish project
-make lint - Start lint
-make install - Install dependences
-
-```
+- `make games` - Start brain-games.js
+- `make even` - Start brain-even.js
+- `make calc` - Start brain-calc.js
+- `make gcd` - Start brain-gcd.js
+- `make prog` - Start brain-progression.js
+- `make prime` - Start brain-prime.js
+- `make publish` - Publish project
+- `make lint` - Start lint
+- `make install` - Install dependences
 
 ## Demo
 
