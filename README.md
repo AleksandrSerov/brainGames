@@ -4,22 +4,23 @@
 <a href="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1">
 <img src="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1.svg?branch=master" /></a>
 
-## Starting brain-even
+## Starting even
 
+![Brain-even game](demo/even.gif)
 https://asciinema.org/a/rNdrU2xTfJBOvrd1huR7jXwVl
 
-## Starting brain-calc
+## Starting calc
 
 https://asciinema.org/a/fChThP9hYcVmK9SgAuK8zymiB
 
-## Starting brain-gcd
+## Starting gcd
 
 https://asciinema.org/a/dqRYnN7kMtvDlRARfW1xBXQR8
 
-## Starting brain-progression
+## Starting progression
 
 https://asciinema.org/a/EH6nKGEO8faglZt3IN3GmcBF2
 
-## Starting brain-prime
+## Starting prime
 
 https://asciinema.org/a/8BYcRYZXJcbSxafsgrwPVKzuH
