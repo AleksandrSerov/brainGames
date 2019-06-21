@@ -2,7 +2,7 @@ import playGame from '../engine';
 import getRandomIntNumber from '../generator';
 
 const operators = ['-', '+', '*'];
-const gameDescription = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const getRoundData = () => {
   const operator = operators[getRandomIntNumber(0, operators.length - 1)];
@@ -29,4 +29,4 @@ const getRoundData = () => {
   };
 };
 
-export default () => playGame(gameDescription, getRoundData);
+export default () => playGame(description, getRoundData);

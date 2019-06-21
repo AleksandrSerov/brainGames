@@ -2,7 +2,7 @@ import playGame from '../engine';
 
 import getRandomIntNumber from '../generator';
 
-const gameDescription = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (num1, num2) => (num1 !== 0 ? getGcd(num2 % num1, num1) : num2);
 
@@ -17,4 +17,4 @@ const getRoundData = () => {
   };
 };
 
-export default () => playGame(gameDescription, getRoundData);
+export default () => playGame(description, getRoundData);

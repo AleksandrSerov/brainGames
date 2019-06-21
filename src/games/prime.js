@@ -2,7 +2,7 @@ import playGame from '../engine';
 
 import getRandomIntNumber from '../generator';
 
-const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -26,4 +26,4 @@ const getRoundData = () => {
   };
 };
 
-export default () => playGame(gameDescription, getRoundData);
+export default () => playGame(description, getRoundData);

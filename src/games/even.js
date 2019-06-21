@@ -1,7 +1,7 @@
 import playGame from '../engine';
 import getRandomIntNumber from '../generator';
 
-const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const isEven = num => num % 2 === 0;
 
@@ -14,4 +14,4 @@ const getRoundData = () => {
   };
 };
 
-export default () => playGame(gameDescription, getRoundData);
+export default () => playGame(description, getRoundData);
