@@ -10,27 +10,31 @@
 git clone https://github.com/AleksandrSerov/frontend-project-lvl1.git
 cd frontend-project-lvl1
 make install
-make publish
-sudo npm link
+```
+
+## Scripts
+
+```bash
+make games - Start brain-games.js
+make even - Start brain-even.js
+make calc - Start brain-calc.js
+make gcd - Start brain-gcd.js
+make prog - Start brain-progression.js
+make prime - Start brain-prime.js
+make publish - Publish project
+make lint - Start lint
+make install - Install dependences
+
 ```
 
 ### Starting even
 
 ![Brain-even game](demo/even.gif)
-https://asciinema.org/a/rNdrU2xTfJBOvrd1huR7jXwVl
 
 ### Starting calc
 
-https://asciinema.org/a/fChThP9hYcVmK9SgAuK8zymiB
-
 ### Starting gcd
-
-https://asciinema.org/a/dqRYnN7kMtvDlRARfW1xBXQR8
 
 ### Starting progression
 
-https://asciinema.org/a/EH6nKGEO8faglZt3IN3GmcBF2
-
 ### Starting prime
-
-https://asciinema.org/a/8BYcRYZXJcbSxafsgrwPVKzuH
