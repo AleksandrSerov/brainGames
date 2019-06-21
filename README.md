@@ -4,12 +4,24 @@
 <a href="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1">
 <img src="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1.svg?branch=master" /></a>
 
-## Instalation
+## Installation
 
 ```bash
 git clone https://github.com/AleksandrSerov/frontend-project-lvl1.git
 cd frontend-project-lvl1
 make install
+```
+
+## Publish package
+
+```bash
+make publish
+```
+
+## Installation package
+
+```bash
+sudo npm link
 ```
 
 ## Scripts
