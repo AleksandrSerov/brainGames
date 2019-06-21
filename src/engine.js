@@ -5,7 +5,7 @@ const playGame = (description, getRoundData) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${description}`);
 
-  const playerName = readlineSync.question('May I have your name? ');
+  const playerName = readlineSync.question('May I have your name?');
   console.log(`Hello, ${playerName}!`);
 
   const iter = (count) => {
@@ -14,7 +14,7 @@ const playGame = (description, getRoundData) => {
     }
     const { question, correctAnswer } = getRoundData();
     console.log(`Question: ${question}`);
-    const playerAnswer = readlineSync.question('Your answer: ');
+    const playerAnswer = readlineSync.question('Your answer:');
 
     if (playerAnswer === correctAnswer) {
       console.log('Correct!');
