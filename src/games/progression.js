@@ -28,6 +28,4 @@ const getRoundData = () => {
   };
 };
 
-export default () => {
-  playGame(gameDescription, getRoundData);
-};
+export default () => playGame(gameDescription, getRoundData);
