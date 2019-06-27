@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const maxCountOfRounds = 3;
+const maxQuantityOfRounds = 3;
 
 const playGame = (description, getRoundData) => {
   console.log('Welcome to the Brain Games!');
@@ -10,7 +10,7 @@ const playGame = (description, getRoundData) => {
   console.log(`Hello, ${playerName}!`);
 
   const iter = (count) => {
-    if (count > maxCountOfRounds) {
+    if (count > maxQuantityOfRounds) {
       console.log(`Congratulations, ${playerName}`);
       return;
     }
