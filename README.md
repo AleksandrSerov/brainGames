@@ -1,8 +1,35 @@
-# Hexlet brainGames
+# BrainGames
 
 <a href="https://codeclimate.com/github/AleksandrSerov/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/8be57b9cd6a5bf0ed3c8/maintainability" /></a>
 <a href="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1">
 <img src="https://travis-ci.com/AleksandrSerov/frontend-project-lvl1.svg?branch=master" /></a>
+
+## Description
+
+Set of mini-games launched from the console
+
+Game example:
+
+```bash
+$ brain-progression
+
+Welcome to the Brain Game!
+What number is missing in this progression?
+
+May I have your name? Roman
+Hello, Roman!
+
+Question: 14 .. 18 20 22 24 26 28
+Your answer: 16
+Correct!
+Question: 5 6 7 8 9 .. 11 12
+Your answer: 10
+Correct!
+Question: 12 15 18 21 .. 27 30 33
+Your answer: 24
+Correct!
+Congratulations, Roman!
+```
 
 ## Installation
 
