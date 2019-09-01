@@ -1,7 +1,7 @@
 # BrainGames
 
 <a href="https://codeclimate.com/github/AleksandrSerov/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/8be57b9cd6a5bf0ed3c8/maintainability" /></a>
-[![Build Status](https://travis-ci.org/AleksandrSerov/gendiff.svg?branch=master)](https://travis-ci.org/AleksandrSerov/gendiff)
+[![Build Status](https://travis-ci.org/AleksandrSerov/brainGames.svg?branch=master)](https://travis-ci.org/AleksandrSerov/brainGames)
 
 ## Description
 
