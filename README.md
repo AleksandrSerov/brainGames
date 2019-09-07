@@ -33,7 +33,7 @@ Congratulations, Roman!
 ## Installation
 
 ```bash
-git clone https://github.com/AleksandrSerov/frontend-project-lvl1.git
+git clone https://github.com/AleksandrSerov/brainGames.git
 cd brainGames
 make install
 ```
