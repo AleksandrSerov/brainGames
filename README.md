@@ -34,7 +34,7 @@ Congratulations, Roman!
 
 ```bash
 git clone https://github.com/AleksandrSerov/frontend-project-lvl1.git
-cd frontend-project-lvl1
+cd brainGames
 make install
 ```
 
